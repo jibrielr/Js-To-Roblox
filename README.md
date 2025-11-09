@@ -44,22 +44,12 @@ cd js-to-roblox/server
 npm install
 ```
 
-3. Configure `.env`:
-```sh
-cp .env.example .env
-```
-Fill in your values:
-```
-ROVER_API_KEY=your_rover_api_key_here
-SHARED_SECRET=your_shared_secret_here
-```
-
-4. Start the server:
+3. Start the server:
 ```sh
 node functions.js
 ```
 
-5. Install the Roblox script (`RequestHandler.lua`) in `ServerScriptService` and configure:
+4. Install the Roblox script (`RequestHandler.lua`) in `ServerScriptService` and configure:
 ```lua
 local SHARED_SECRET = "your-shared-secret-here"
 local API_URL = "http://your-server-ip:2000/requests"
