@@ -1,0 +1,19 @@
+{
+  "name": "js-to-roblox",
+  "version": "1.0.0",
+  "description": "Node.js backend for Roblox script interaction",
+  "main": "functions.js",
+  "scripts": {
+    "start": "node functions.js",
+    "dev": "nodemon functions.js"
+  },
+  "author": "Jibriel Rahman",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",        
+    "axios": "^1.5.0"          
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"         
+  }
+}
