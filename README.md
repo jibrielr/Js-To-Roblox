@@ -28,7 +28,6 @@ js-to-roblox/
 ├── roblox/                # Script for Roblox (ServerScriptService)
 │   └── RequestHandler.lua
 │
-├── exampleSendRequest.js  # Example JS showing how to send a request
 └── README.md
 ```
 
@@ -72,7 +71,7 @@ local API_URL = "http://your-server-ip:2000/requests"
 
 ## 💬 Example Usage
 
-You can use `SendRequest` in any JS code. Here’s an example in `exampleSendRequest.js`:
+You can use `SendRequest` in any JS code. Here’s an example:
 
 ```js
 const { SendRequest } = require('./server/functions');
