@@ -19,16 +19,14 @@ It can be used in any method that can make HTTP requests to a Node.js backend, b
 
 ```
 js-to-roblox/
+├── server/                # Node.js backend / API
+│   ├── functions.js       # Backend logic
+│   └── package.json       # Node.js dependencies
 │
-├── server/                # Node.js backend/API
-│   ├── functions.js       # your backend logic
-│   ├── package.json
-│   └── .env.example       # Example environment variables
+├── roblox/                # Roblox scripts (ServerScriptService)
+│   └── RequestHandler.lua # Handles requests from Roblox
 │
-├── roblox/                # Script for Roblox (ServerScriptService)
-│   └── RequestHandler.lua
-│
-└── README.md
+└── README.md              # Project overview / documentation
 ```
 
 ---
