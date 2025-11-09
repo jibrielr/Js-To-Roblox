@@ -21,12 +21,15 @@ It can be used in any method that can make HTTP requests to a Node.js backend, b
 js-to-roblox/
 │
 ├── server/                # Node.js backend/API
-│   ├── server.js
+│   ├── functions.js       # your backend logic
 │   ├── package.json
 │   └── .env.example       # Example environment variables
 │
-└── roblox/                # Script for Roblox (ServerScriptService)
-    └── RequestHandler.lua
+├── roblox/                # Script for Roblox (ServerScriptService)
+│   └── RequestHandler.lua
+│
+├── exampleSendRequest.js  # Example JS showing how to send a request
+└── README.md
 ```
 
 ---
@@ -56,7 +59,7 @@ SHARED_SECRET=your_shared_secret_here
 
 4. Start the server:
 ```sh
-node server.js
+node functions.js
 ```
 
 5. Install the Roblox script (`RequestHandler.lua`) in `ServerScriptService` and configure:
@@ -67,9 +70,32 @@ local API_URL = "http://your-server-ip:2000/requests"
 
 ---
 
-## 💬 Discord Bot Example
+## 💬 Example Usage
 
-Use `SendRequest` to send commands from a Discord bot (discord.js + sapphire framework).
+You can use `SendRequest` in any JS code. Here’s an example in `exampleSendRequest.js`:
+
+```js
+const { SendRequest } = require('./server/functions');
+
+async function runExample() {
+  const username = 'RobloxPlayer123';
+  const args = { type: 'kick', reason: 'Breaking rules' };
+
+  // Mock interaction object
+  const interaction = {
+    user: { id: 'discordUserId', username: 'DiscordUser' },
+    member: { nickname: 'ModNick' },
+    guild: { id: 'guildId' },
+    deferReply: async () => console.log('Deferred reply'),
+    followUp: async (msg) => console.log('FollowUp:', msg),
+    editReply: async (msg) => console.log('EditReply:', msg),
+  };
+
+  await SendRequest(username, args, interaction);
+}
+
+runExample();
+```
 
 ---
 
