@@ -1,6 +1,6 @@
 # JS to Roblox
 
-This repository allows sending commands from **JavaScript** to be executed inside a **Roblox game**. 
+Sending commands from **JavaScript** to be executed inside a **Roblox game**. 
 It can be used in any method that can make HTTP requests to a Node.js backend, but in this example, it is used with a **Discord bot** (discord.js + @sapphire/framework).
 
 ---
