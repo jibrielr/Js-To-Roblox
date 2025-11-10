@@ -49,12 +49,6 @@ npm install
 node functions.js
 ```
 
-4. Install the Roblox script (`RequestHandler.lua`) in `ServerScriptService` and configure:
-```lua
-local SHARED_SECRET = "your-shared-secret-here"
-local API_URL = "http://your-server-ip:2000/requests"
-```
-
 ---
 
 ## 💬 Example Usage
